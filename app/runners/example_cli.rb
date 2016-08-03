@@ -1,4 +1,4 @@
-class ExampleCLI
+  class ExampleCLI
 
   def call
     puts "Welcome, what Twitter search word should I use?"
