@@ -1,8 +1,8 @@
 require 'pry'
 
-class CatCLI
+class CatModel
 
-  attr_reader :category
+  attr_reader :parameter
 
   def call
     puts "Welcome! We have every cat you could possibly desire!"
@@ -40,19 +40,21 @@ class CatCLI
 
   end
 
-  def get_category_from_user
-    categories = %w[hats space funny sunglasses boxes caturday ties dream sinks clothes]
 
-    puts "Purrrrr-fect! Please choose a cat from these fine CATegories:"
 
-    categories.each {|cat| puts cat}
+  def get_parameter_from_user
+    parameters = []
+
+   # puts "Purrrrr-fect! Please choose one of these parameters:"
+
+    parameters.each {|cat| puts cat}
 
     input = gets.strip.downcase
 
-    @category = input
+    @parameter = input
 
-     if categories.include?(category)
-      return category
+     if parameters.include?(parameter)
+      return parameter
 
     else
       sorry
@@ -60,15 +62,15 @@ class CatCLI
 
   end
 
-  def give_category
+  def give_parameter
     # binding.pry
-    self.category
+    self.parameter
   end
 
 
   def sorry
     puts "Sorry, I didn't understand your accent."
-    help
+    run
   end
 
 end

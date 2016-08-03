@@ -30,7 +30,7 @@ class CatFetch
 		cat_list = cat_hash["response"]["data"]["images"]["image"].collect { |cat| cat["url"] }
 
 		cat_list.each do |cat_url|
-			puts "OMG A CAT WITH #{@category.upcase}: "
+			puts "OMG A CAT WITH #{@category.upcase}!"
 			system("xdg-open #{cat_url}")
 		end
 	end
