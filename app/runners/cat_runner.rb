@@ -16,7 +16,11 @@ class CatCLI
     run
   end
 
-    
+  def sorry
+    puts "Sorry, I don't understand your accent."
+    help
+  end
+
   def get_user_input
     gets.strip.downcase
   end
@@ -60,16 +64,10 @@ class CatCLI
 
   end
 
-  def give_category
-    # binding.pry
+  def cat_runner
+    self.call
+    self.help
     self.category
   end
 
-
-  def sorry
-    puts "Sorry, I didn't understand your accent."
-    help
-  end
-
 end
-
